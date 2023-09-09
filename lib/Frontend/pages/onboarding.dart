@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:sih_2023/Frontend/pages/homepage.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
@@ -10,6 +11,7 @@ class OnboardingScreen extends StatefulWidget {
 
 class _OnboardingScreenState extends State<OnboardingScreen> {
   final controller = PageController();
+  bool isLastPage = true;
   @override
   void dispose() {
     controller.dispose();
@@ -39,8 +41,24 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             ),
             Container(
               color: Colors.green,
-              child: const Center(
-                child: Text("Third"),
+              child: Center(
+                child: Column(
+                  children: [
+                    const Text("Third"),
+                    ElevatedButton(
+                      onPressed: () {
+                        Navigator.of(context).pushReplacement(
+                          MaterialPageRoute(
+                            builder: (context) => HomePage(),
+                          ),
+                        );
+                      },
+                      child: const Text(
+                        "Get Started",
+                      ),
+                    ),
+                  ],
+                ),
               ),
             )
           ],

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sih_2023/Frontend/onboarding.dart';
+import 'package:sih_2023/Frontend/pages/onboarding.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,9 +15,8 @@ class MyApp extends StatelessWidget {
       title: 'SIH 2023',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.deepPurple,
-        ),
+        colorScheme: const ColorScheme.light(),
+        useMaterial3: true,
       ),
       home: const OnboardingScreen(),
     );
