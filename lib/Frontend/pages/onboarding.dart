@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:sih_2023/Frontend/pages/auth/signup.dart';
 import 'package:sih_2023/Frontend/pages/homepage.dart';
 
 class OnboardingScreen extends StatefulWidget {
@@ -49,7 +50,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       onPressed: () {
                         Navigator.of(context).pushReplacement(
                           MaterialPageRoute(
-                            builder: (context) => HomePage(),
+                            builder: (context) => const Signup(),
                           ),
                         );
                       },
