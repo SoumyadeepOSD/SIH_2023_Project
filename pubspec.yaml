@@ -40,6 +40,8 @@ dependencies:
   smooth_page_indicator: ^1.1.0
   google_nav_bar: ^5.0.6
   cloud_firestore: ^4.9.1
+  firebase_auth: ^4.9.0
+  email_validator: ^2.1.17
 
 dev_dependencies:
   flutter_test:
