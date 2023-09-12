@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:sih_2023/Frontend/constant/colors.dart';
 import 'package:sih_2023/Frontend/constant/widgets.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
-
+import 'package:sih_2023/Frontend/pages/firstTab.dart';
+import 'package:sih_2023/Frontend/pages/fourthTab.dart';
+import 'package:sih_2023/Frontend/pages/secondTab.dart';
+import 'package:sih_2023/Frontend/pages/thirdTab.dart';
 import 'assistant.dart';
 
 class HomePage extends StatefulWidget {
@@ -15,10 +18,10 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int currentIndex = 0;
   final screens = [
-    const Center(child: Text("Home")),
-    const Center(child: Text("Search")),
-    const Center(child: Text("Love")),
-    const Center(child: Text("Settings")),
+    const FirstTab(),
+    const SecondTab(),
+    const ThirdTab(),
+    const FourthTab()
   ];
 
   @override
