@@ -2,24 +2,25 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:sih_2023/Frontend/constant/colors.dart';
+import 'package:sih_2023/Frontend/pages/usermodel.dart';
 import '../constant/widgets.dart';
 import 'firstTab.dart';
-import 'usermodel.dart';
 
 TextEditingController _firstNameController = TextEditingController();
 TextEditingController _lastNameController = TextEditingController();
 TextEditingController _locationController = TextEditingController();
 TextEditingController _registerIdController = TextEditingController();
 TextEditingController _phoneNameController = TextEditingController();
+TextEditingController _typeController = TextEditingController();
 
-class RegisterUser extends StatefulWidget {
-  const RegisterUser({super.key});
+class RegisterProvider extends StatefulWidget {
+  const RegisterProvider({super.key});
 
   @override
-  State<RegisterUser> createState() => _RegisterUserState();
+  State<RegisterProvider> createState() => _RegisterProviderState();
 }
 
-class _RegisterUserState extends State<RegisterUser> {
+class _RegisterProviderState extends State<RegisterProvider> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,7 +39,8 @@ class _RegisterUserState extends State<RegisterUser> {
                   const SizedBox(
                     height: 30.0,
                   ),
-                  customTextWidget("Register", 20.0, FontWeight.bold, blue),
+                  customTextWidget(
+                      "Register your Profession", 20.0, FontWeight.bold, blue),
                   const SizedBox(
                     height: 30.0,
                   ),
@@ -57,6 +59,12 @@ class _RegisterUserState extends State<RegisterUser> {
                   myCustomTextfield(
                       controllerName: _locationController,
                       hint: "Enter your address"),
+                  const SizedBox(
+                    height: 20.0,
+                  ),
+                  myCustomTextfield(
+                      controllerName: _typeController,
+                      hint: "Enter your Profession type"),
                   const SizedBox(
                     height: 20.0,
                   ),
@@ -80,26 +88,25 @@ class _RegisterUserState extends State<RegisterUser> {
                       final lastName = _lastNameController.text;
                       final location = _locationController.text;
                       final registerId = _registerIdController.text;
-                      final phoneName = _phoneNameController.text;
+                      final phoneNumber = _phoneNameController.text;
+                      final type = _typeController.text;
 
-                      final user = UserModel(
+                      final user = DistributorModel(
                           firstName: firstName,
                           lastName: lastName,
                           location: location,
                           registerId: registerId,
-                          phoneName: phoneName);
+                          phoneNumber: phoneNumber,
+                          type: "Distributor");
                       createUser(user);
                       const CircularProgressIndicator();
                       if (firstName != null &&
                           lastName != null &&
                           location != null &&
                           registerId != null &&
-                          phoneName != null) {
-                        Navigator.of(context).pushReplacement(
-                          MaterialPageRoute(
-                            builder: (context) => const FirstTab(),
-                          ),
-                        );
+                          phoneNumber != null &&
+                          type != null) {
+                        Navigator.of(context).pop();
                       }
                     },
                     child: const Text("Register"),
@@ -114,41 +121,16 @@ class _RegisterUserState extends State<RegisterUser> {
   }
 }
 
-Widget buildUser(UserModel user) {
-  String timePeriod = getTimePeriod();
-  return customTextWidget(
-      'Good $timePeriod, \n${user.firstName}', 30.0, FontWeight.bold, black);
-}
-
-Stream<List<UserModel>> readUsers() =>
-    FirebaseFirestore.instance.collection('users').snapshots().map((snapshot) =>
-        snapshot.docs.map((doc) => UserModel.fromJson(doc.data())).toList());
-
-Stream<List<DistributorModel>> readProviders() => FirebaseFirestore.instance
+Stream<List<DistributorModel>> readUsers() => FirebaseFirestore.instance
     .collection('providers')
     .snapshots()
     .map((snapshot) => snapshot.docs
         .map((doc) => DistributorModel.fromJson(doc.data()))
         .toList());
 
-Future createUser(UserModel user) async {
-  final docUser = FirebaseFirestore.instance.collection('users').doc();
+Future createUser(DistributorModel user) async {
+  final docUser = FirebaseFirestore.instance.collection('providers').doc();
   user.id = docUser.id;
   final json = user.toJson();
   await docUser.set(json);
-}
-
-String getTimePeriod() {
-  DateTime now = DateTime.now();
-  int hour = now.hour;
-
-  if (hour >= 5 && hour < 12) {
-    return "Morning";
-  } else if (hour >= 12 && hour < 17) {
-    return "Afternoon";
-  } else if (hour >= 17 && hour < 21) {
-    return "Evening";
-  } else {
-    return "Night";
-  }
 }

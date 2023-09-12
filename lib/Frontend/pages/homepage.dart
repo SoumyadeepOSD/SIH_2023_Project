@@ -4,6 +4,7 @@ import 'package:sih_2023/Frontend/constant/widgets.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:sih_2023/Frontend/pages/firstTab.dart';
 import 'package:sih_2023/Frontend/pages/fourthTab.dart';
+import 'package:sih_2023/Frontend/pages/providerRegister.dart';
 import 'package:sih_2023/Frontend/pages/secondTab.dart';
 import 'package:sih_2023/Frontend/pages/thirdTab.dart';
 import 'assistant.dart';
@@ -70,9 +71,15 @@ class _HomePageState extends State<HomePage> {
         ),
         floatingActionButtonAnimator: FloatingActionButtonAnimator.scaling,
         floatingActionButton: FloatingActionButton(
-          onPressed: () => Navigator.of(context).push(
+          onPressed: () =>
+              // Navigator.of(context).push(
+              //   MaterialPageRoute(
+              //     builder: (context) => const PersonalAssistant(),
+              //   ),
+              // ),
+              Navigator.of(context).push(
             MaterialPageRoute(
-              builder: (context) => const PersonalAssistant(),
+              builder: (context) => const RegisterProvider(),
             ),
           ),
           backgroundColor: black,
