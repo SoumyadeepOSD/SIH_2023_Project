@@ -1,70 +1,5 @@
-// import 'package:flutter/material.dart';
-// import 'package:sih_2023/Frontend/pages/usermodel.dart';
-
-// import '../constant/colors.dart';
-// import '../constant/widgets.dart';
-
-// class ServiceProviders extends StatefulWidget {
-//   const ServiceProviders({super.key});
-
-//   @override
-//   State<ServiceProviders> createState() => _ServiceProvidersState();
-// }
-
-// class _ServiceProvidersState extends State<ServiceProviders> {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-// appBar: AppBar(
-//   leading: InkWell(
-//     onTap: () {
-//       Navigator.of(context).pop();
-//     },
-//     child: Icon(
-//       Icons.arrow_back_ios,
-//       color: white,
-//     ),
-//   ),
-//   backgroundColor: black,
-//   title: customTextWidget(
-//     "Service Providers",
-//     16.0,
-//     FontWeight.bold,
-//     white,
-//   ),
-// ),
-//       body: StreamBuilder<List<DistributorModel>>(
-//         builder: (context, snapshot) {
-//           if (snapshot.hasError) {
-//             return const Text('Something went wrong!');
-//           } else if (snapshot.hasData) {
-//             final providers = snapshot.data!;
-//             return Container(
-//               child: Column(
-//                 children: [
-//                   SizedBox(
-//                     height: 200,
-//                     width: double.infinity,
-//                     child: ListView(
-//                       children: providers.map(buildProvider).toList(),
-//                     ),
-//                   ),
-//                 ],
-//               ),
-//             );
-//           }
-//           else {
-//             return const Center(
-//               child: CircularProgressIndicator(),
-//             );
-//           }
-//         },
-//       ),
-//     );
-//   }
-// }
-
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:sih_2023/Frontend/constant/colors.dart';
 import 'package:sih_2023/Frontend/constant/widgets.dart';
@@ -115,6 +50,20 @@ class ServiceProviders extends StatelessWidget {
                       children: users.map(buildProvider).toList(),
                     ),
                   ),
+                  Expanded(
+                    child: FutureBuilder(
+                        future: _loadImages(),
+                        builder: (context, snapshotImage) {
+                          try {
+                            print(snapshotImage.data);
+                          } catch (e) {
+                            print(e);
+                          }
+                          return const Center(
+                            child: CircularProgressIndicator(),
+                          );
+                        }),
+                  ),
                 ],
               ),
             );
@@ -144,8 +93,7 @@ Widget buildProvider(DistributorModel user) {
           title: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              customTextWidget("${user.firstName!} ${user.lastName!}", 16.0,
-                  FontWeight.bold, black),
+              customTextWidget(user.firstName!, 16.0, FontWeight.bold, black),
               customTextWidget(user.type!, 16.0, FontWeight.w500, black),
             ],
           ),
@@ -160,4 +108,22 @@ Widget buildProvider(DistributorModel user) {
       ],
     ),
   );
+}
+
+// =====================show images with list==================
+Future _loadImages() async {
+  List<Map<String, dynamic>> files = [];
+
+  final ListResult result = await FirebaseStorage.instance.ref().list();
+  final List<Reference> allFiles = result.items;
+
+  await Future.forEach<Reference>(allFiles, (file) async {
+    final String fileUrl = await file.getDownloadURL();
+    files.add({
+      "url": fileUrl,
+      "path": file.fullPath,
+    });
+  });
+
+  return files;
 }

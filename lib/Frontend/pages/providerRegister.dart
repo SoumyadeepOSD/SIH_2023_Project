@@ -1,10 +1,11 @@
+import 'dart:io';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:sih_2023/Frontend/constant/colors.dart';
 import 'package:sih_2023/Frontend/pages/usermodel.dart';
 import '../constant/widgets.dart';
-import 'firstTab.dart';
+import 'package:file_picker/file_picker.dart';
 
 TextEditingController _firstNameController = TextEditingController();
 TextEditingController _lastNameController = TextEditingController();
@@ -21,6 +22,7 @@ class RegisterProvider extends StatefulWidget {
 }
 
 class _RegisterProviderState extends State<RegisterProvider> {
+  PlatformFile? pickedFile;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -82,6 +84,30 @@ class _RegisterProviderState extends State<RegisterProvider> {
                   const SizedBox(
                     height: 20.0,
                   ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      ElevatedButton(
+                          onPressed: () {
+                            selectFile();
+                          },
+                          child: const Text("Choose File")),
+                      ElevatedButton(
+                          onPressed: () {
+                            uploadFile();
+                          },
+                          child: const Text("Upload File")),
+                      if (pickedFile != null)
+                        Expanded(
+                          child: Container(
+                            color: Colors.blue.shade200,
+                            child: Center(
+                              child: Text(pickedFile!.name),
+                            ),
+                          ),
+                        ),
+                    ],
+                  ),
                   ElevatedButton(
                     onPressed: () {
                       final firstName = _firstNameController.text;
@@ -118,6 +144,21 @@ class _RegisterProviderState extends State<RegisterProvider> {
         ),
       ),
     );
+  }
+
+  Future selectFile() async {
+    final result = await FilePicker.platform.pickFiles();
+    if (result == null) return;
+    setState(() {
+      pickedFile = result.files.first;
+    });
+  }
+
+  Future uploadFile() async {
+    final path = 'images/${pickedFile!.name}';
+    final file = File(pickedFile!.path!);
+    final ref = FirebaseStorage.instance.ref().child(path);
+    ref.putFile(file);
   }
 }
 
