@@ -29,6 +29,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       body: SafeArea(
         child: PageView(
           children: [
+            //change onboarding screen...
             Container(
               color: Colors.red,
               child: const Center(
