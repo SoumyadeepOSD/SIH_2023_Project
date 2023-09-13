@@ -1,6 +1,7 @@
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:sih_2023/Frontend/pages/detailsList.dart';
 import 'Frontend/constant/colors.dart';
 import 'Frontend/constant/widgets.dart';
 import 'Frontend/pages/register.dart';
@@ -142,19 +143,50 @@ class _TestingImageState extends State<TestingImage> {
                                                         horizontal: 20.0,
                                                         vertical: 10.0),
                                                 decoration: BoxDecoration(
-                                                    color: lightGrey,
-                                                    borderRadius:
-                                                        const BorderRadius.all(
-                                                            Radius.circular(
-                                                                8.0))),
+                                                  color: lightGrey,
+                                                  borderRadius:
+                                                      const BorderRadius.all(
+                                                    Radius.circular(8.0),
+                                                  ),
+                                                ),
                                                 child: SingleChildScrollView(
                                                   scrollDirection:
                                                       Axis.vertical,
                                                   child: ListTile(
-                                                    leading: Image.network(
-                                                      snapshot.data![index],
-                                                      width: 50.0,
-                                                      height: 50.0,
+                                                    onTap: () {
+                                                      Navigator.push(
+                                                        context,
+                                                        MaterialPageRoute(
+                                                          builder: (context) =>
+                                                              DetailsList(
+                                                            firstName:
+                                                                users[index]
+                                                                    .firstName,
+                                                            lastName:
+                                                                users[index]
+                                                                    .lastName,
+                                                            location:
+                                                                users[index]
+                                                                    .location,
+                                                            registerId:
+                                                                users[index]
+                                                                    .registerId,
+                                                            phoneNumber: users[
+                                                                    index]
+                                                                .phoneNumber,
+                                                            image: snapshot
+                                                                .data![index],
+                                                          ),
+                                                        ),
+                                                      );
+                                                    },
+                                                    leading: ClipOval(
+                                                      child: Image.network(
+                                                        snapshot.data![index],
+                                                        width: 50.0,
+                                                        height: 50.0,
+                                                        fit: BoxFit.cover,
+                                                      ),
                                                     ),
                                                     title: Row(
                                                       mainAxisAlignment:
