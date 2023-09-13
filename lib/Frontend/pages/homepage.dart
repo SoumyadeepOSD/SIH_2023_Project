@@ -32,7 +32,7 @@ class _HomePageState extends State<HomePage> {
         appBar: AppBar(
           backgroundColor: black,
           title: customTextWidget(
-            "App Name",
+            "Legal इनोवेटर्स",
             16.0,
             FontWeight.bold,
             white,
