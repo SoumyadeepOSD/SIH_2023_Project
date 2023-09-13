@@ -7,6 +7,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:sih_2023/Frontend/pages/register.dart';
 import 'package:sih_2023/Frontend/pages/serviceProviders.dart';
 import 'package:sih_2023/Frontend/pages/usermodel.dart';
+import 'package:sih_2023/testingImage.dart';
 
 class FirstTab extends StatelessWidget {
   const FirstTab({super.key});
@@ -49,7 +50,7 @@ class FirstTab extends StatelessWidget {
                         onPressed: () {
                           Navigator.of(context).push(
                             MaterialPageRoute(
-                              builder: (context) => const ServiceProviders(),
+                              builder: (context) => const TestingImage(),
                             ),
                           );
                         },
