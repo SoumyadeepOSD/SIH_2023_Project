@@ -168,6 +168,9 @@ class _TestingImageState extends State<TestingImage> {
                                                             location:
                                                                 users[index]
                                                                     .location,
+                                                            type: users[index]
+                                                                .type
+                                                                .toString(),
                                                             registerId:
                                                                 users[index]
                                                                     .registerId,
