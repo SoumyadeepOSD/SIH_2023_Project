@@ -123,7 +123,7 @@ class _RegisterProviderState extends State<RegisterProvider> {
                           location: location,
                           registerId: registerId,
                           phoneNumber: phoneNumber,
-                          type: "Distributor");
+                          type: type);
                       createUser(user);
                       const CircularProgressIndicator();
                       if (firstName != null &&
