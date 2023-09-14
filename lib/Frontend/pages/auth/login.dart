@@ -7,6 +7,7 @@ import 'package:sih_2023/Frontend/pages/homepage.dart';
 import 'package:sih_2023/Frontend/pages/register.dart';
 import 'package:sih_2023/main.dart';
 import '../../constant/widgets.dart';
+import '../preferencePage.dart';
 import '../usermodel.dart';
 
 TextEditingController _emailController = TextEditingController();
@@ -80,7 +81,14 @@ class _LoginState extends State<Login> {
                                             backgroundColor: black,
                                           ),
                                           onPressed: () {
-                                            signIn(context: context);
+                                            // signIn(context: context);
+                                            Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                builder: (context) =>
+                                                    const PreferencePage(),
+                                              ),
+                                            );
                                           },
                                           child: customTextWidget("Login", 20.0,
                                               FontWeight.w500, white),

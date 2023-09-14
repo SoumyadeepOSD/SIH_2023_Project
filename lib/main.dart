@@ -5,8 +5,6 @@ import 'package:sih_2023/Frontend/constant/utils.dart';
 import 'package:sih_2023/Frontend/pages/onboarding.dart';
 import 'package:sih_2023/firebase_options.dart';
 
-import 'Frontend/constant/utils.dart';
-
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);

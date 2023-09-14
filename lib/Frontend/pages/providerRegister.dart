@@ -3,6 +3,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:sih_2023/Frontend/constant/colors.dart';
+import 'package:sih_2023/Frontend/constant/images.dart';
 import 'package:sih_2023/Frontend/pages/usermodel.dart';
 import '../constant/widgets.dart';
 import 'package:file_picker/file_picker.dart';
@@ -37,9 +38,18 @@ class _RegisterProviderState extends State<RegisterProvider> {
             Container(
               margin: const EdgeInsets.symmetric(horizontal: 20.0),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   const SizedBox(
-                    height: 30.0,
+                    height: 20.0,
+                  ),
+                  const Image(
+                    image: AssetImage(avtar),
+                    height: 100,
+                    width: 100,
+                  ),
+                  const SizedBox(
+                    height: 20.0,
                   ),
                   customTextWidget(
                       "Register your Profession", 20.0, FontWeight.bold, blue),
