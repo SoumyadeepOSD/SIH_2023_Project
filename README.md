@@ -23,8 +23,45 @@ Our Team `Legal_Innovators` is building up <b>One stop shop</b> solution for the
 
 ## ⚙️How our App works?
 Our application has primary key components(features) as follows:
-- **Interactive Home Page**: User can get overall details about what this application actually works and they can find different options as per their requirements.
-- **24x7 AI Chat Bot**: For any misconceptions & queies, user can interact with our custom data driven chatbot which work over RNN and Generative AI models.
-- **Encrypted Private file**: On the top of the appbar, private file upload section is there. Docs related to particular context can be uploaded for future references which will be secured using encryption techniques.
-- ****
+
+- **Interactive Home Page**:
+
+![image](https://github.com/SoumyadeepOSD/SIH_2023_Project/assets/115442240/4f2b8355-de1f-4783-9e5e-31d4cb70ac37)
+
+User can get overall details about what this application actually works and they can find different options as per their requirements.
+
+
+- **24x7 AI Chat Bot**:
+
+![image](https://github.com/SoumyadeepOSD/SIH_2023_Project/assets/115442240/07f7e46c-f3c2-44fa-b8df-5fdd15a01f34)
+
+For any misconceptions & queies, user can interact with our custom data driven chatbot which work over RNN and Generative AI models.
+
+
+- **Encrypted Private file**:
+
+![image](https://github.com/SoumyadeepOSD/SIH_2023_Project/assets/115442240/c0593315-1bd1-4067-89d3-60c837211460)
+
+On the top of the appbar, private file upload section is there. Docs related to particular context can be uploaded for future references which will be secured using encryption techniques.
+
+
+- **Search Local Service Providers with Text, Search functionality**
+
+![image](https://github.com/SoumyadeepOSD/SIH_2023_Project/assets/115442240/78a9f85f-27da-4d4b-a4a0-a81cb2588d0b)
+
+Users can enable speech to text functionality as an additional feature which will provide extra support for improving the user experience.
+
+
+- **Multi Language Support**
+
+![image](https://github.com/SoumyadeepOSD/SIH_2023_Project/assets/115442240/f03851cc-6032-4321-a022-309e5b631c83)
+
+Multi language support will break through the language barrier, and everyone will be able to interact with this app.
+
+
+- **Incentive and Recognigation**
+
+![image](https://github.com/SoumyadeepOSD/SIH_2023_Project/assets/115442240/8be29791-07e7-4096-99e5-ac17c75ca6ac)
+
+Depending upon the work, the best service provider will get special verification and recognigation which will work as a "Proof of work" for selecting them by users
 
