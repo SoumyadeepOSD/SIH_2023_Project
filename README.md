@@ -17,9 +17,14 @@
 
 
 
-## Our Approach
+## 👨🏻‍💻Our Approach
 We are trying to solve the problem of Indian Govt. by our innovative approach for the `ministry of Law & Justice`
 Our Team `Legal_Innovators` is building up <b>One stop shop</b> solution for the professionals like 'Advocate', 'Notery', 'Writers', 'Munsi' etc. as well as for the common citizen by merging the gap between providers & users, As a developer/innovators it's our prime responsibility to solve the common problems of every people in most optimistic and easy way. For that We are using various Technologies and framework in our project. Service Providers and client both will interact with our platform in the form of android application as well as website. 
 
-## How our App works?
-Our application has Few sections
+## ⚙️How our App works?
+Our application has primary key components(features) as follows:
+- **Interactive Home Page**: User can get overall details about what this application actually works and they can find different options as per their requirements.
+- **24x7 AI Chat Bot**: For any misconceptions & queies, user can interact with our custom data driven chatbot which work over RNN and Generative AI models.
+- **Encrypted Private file**: On the top of the appbar, private file upload section is there. Docs related to particular context can be uploaded for future references which will be secured using encryption techniques.
+- ****
+
