@@ -54,14 +54,14 @@ Users can enable speech to text functionality as an additional feature which wil
 
 - **Multi Language Support**
 
-![image](https://github.com/SoumyadeepOSD/SIH_2023_Project/assets/115442240/f03851cc-6032-4321-a022-309e5b631c83)
+<img src="https://github.com/SoumyadeepOSD/SIH_2023_Project/assets/115442240/f03851cc-6032-4321-a022-309e5b631c83" width="300" height="200" alt="Image Description">
 
 Multi language support will break through the language barrier, and everyone will be able to interact with this app.
 
 
 - **Incentive and Recognigation**
 
-![image](https://github.com/SoumyadeepOSD/SIH_2023_Project/assets/115442240/8be29791-07e7-4096-99e5-ac17c75ca6ac)
+<img src="https://github.com/SoumyadeepOSD/SIH_2023_Project/assets/115442240/8be29791-07e7-4096-99e5-ac17c75ca6ac" width="300" height="300" alt="Image Description">
 
 Depending upon the work, the best service provider will get special verification and recognigation which will work as a "Proof of work" for selecting them by users
 
