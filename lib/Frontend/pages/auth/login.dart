@@ -81,14 +81,7 @@ class _LoginState extends State<Login> {
                                             backgroundColor: black,
                                           ),
                                           onPressed: () {
-                                            // signIn(context: context);
-                                            Navigator.push(
-                                              context,
-                                              MaterialPageRoute(
-                                                builder: (context) =>
-                                                    const PreferencePage(),
-                                              ),
-                                            );
+                                            signIn(context: context);
                                           },
                                           child: customTextWidget("Login", 20.0,
                                               FontWeight.w500, white),

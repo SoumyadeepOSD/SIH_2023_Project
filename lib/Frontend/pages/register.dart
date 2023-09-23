@@ -117,7 +117,7 @@ class _RegisterUserState extends State<RegisterUser> {
 Widget buildUser(UserModel user) {
   String timePeriod = getTimePeriod();
   return customTextWidget(
-      'Good $timePeriod, \n${user.firstName}', 30.0, FontWeight.bold, black);
+      'Welcome back ${user.firstName}', 20.0, FontWeight.bold, black);
 }
 
 Stream<List<UserModel>> readUsers() =>

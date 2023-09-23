@@ -2,14 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import 'package:sih_2023/Frontend/pages/auth/login.dart';
-import 'package:sih_2023/Frontend/pages/auth/signup.dart';
-import 'package:sih_2023/Frontend/pages/homepage.dart';
-
 import '../../widgets/build_images.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
-
   @override
   State<OnboardingScreen> createState() => _OnboardingScreenState();
 }
@@ -33,22 +29,19 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         pages: [
           PageViewModel(
             title: 'Aristotle',
-            body:
-            'The law is reason, free from passion.',
+            body: 'The law is reason, free from passion.',
             image: const BuildImages(image: 'assets/images/image1.jpg'),
             decoration: getPageDecoration(),
           ),
           PageViewModel(
             title: 'John Locke',
-            body:
-            'Where there is no law, there is no freedom.',
+            body: 'Where there is no law, there is no freedom.',
             image: const BuildImages(image: 'assets/images/image2.jpg'),
             decoration: getPageDecoration(),
           ),
           PageViewModel(
             title: 'Cicero',
-            body:
-            'The good of the people is the greatest law.',
+            body: 'The good of the people is the greatest law.',
             image: const BuildImages(image: 'assets/images/image3.jpg'),
           )
         ],
@@ -90,7 +83,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         activeSize: const Size(22, 10),
         activeColor: Colors.orange,
         activeShape:
-        RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)));
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)));
   }
 
   void goToHome(context) {
@@ -100,14 +93,3 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-

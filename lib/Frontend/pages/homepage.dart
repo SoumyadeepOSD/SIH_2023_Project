@@ -32,11 +32,27 @@ class _HomePageState extends State<HomePage> {
         appBar: AppBar(
           backgroundColor: black,
           title: customTextWidget(
-            "Legal इनोवेटर्स",
+            "Bharat विधि",
             16.0,
             FontWeight.bold,
             white,
           ),
+          actions: [
+            IconButton(
+              icon: Icon(
+                Icons.file_copy_outlined,
+                color: white,
+              ),
+              onPressed: () {},
+            ),
+            IconButton(
+              icon: Icon(
+                Icons.settings,
+                color: white,
+              ),
+              onPressed: () {},
+            )
+          ],
         ),
         // bottom navigation bar
         bottomNavigationBar: GNav(
@@ -64,20 +80,14 @@ class _HomePageState extends State<HomePage> {
               text: "Favorites",
             ),
             GButton(
-              icon: Icons.settings,
+              icon: Icons.info,
               text: "Settings",
             )
           ],
         ),
         floatingActionButtonAnimator: FloatingActionButtonAnimator.scaling,
         floatingActionButton: FloatingActionButton(
-          onPressed: () =>
-              // Navigator.of(context).push(
-              //   MaterialPageRoute(
-              //     builder: (context) => const PersonalAssistant(),
-              //   ),
-              // ),
-              Navigator.of(context).push(
+          onPressed: () => Navigator.of(context).push(
             MaterialPageRoute(
               builder: (context) => const RegisterProvider(),
             ),
