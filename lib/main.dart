@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:provider/provider.dart';
 import 'package:sih_2023/Frontend/constant/utils.dart';
-import 'package:sih_2023/Frontend/states/locationState.dart';
+import 'package:sih_2023/Frontend/states/generalState.dart';
 import 'package:sih_2023/firebase_options.dart';
 import 'package:sih_2023/splash_screen.dart';
 
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (context) => LocationStateProvider())
+        ChangeNotifierProvider(create: (context) => GeneralStateProvider()),
       ],
       child: MaterialApp(
         scaffoldMessengerKey: messengerKey,

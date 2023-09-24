@@ -30,7 +30,7 @@ class UserModel {
         lastName: json['lastName'],
         location: json['location'],
         registerId: json['registerId'],
-        phoneName: json['phoneName'],
+        phoneName: json['phone'],
       );
 }
 

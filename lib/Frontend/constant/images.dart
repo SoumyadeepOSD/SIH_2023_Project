@@ -14,3 +14,15 @@ const avtar2 = "assets/images/avtar2.png";
 const addImage = "assets/images/addImage.png";
 const imageUpload = "assets/images/imageUpload.png";
 const payment = "assets/images/payment.png";
+
+// Curousel Slider Card
+const firstCard = "assets/images/firstCard.jpeg";
+const secondCard = "assets/images/secondCard.jpeg";
+const thirdCard = "assets/images/thirdCard.png";
+const fourthCard = "assets/images/fourthCard.png";
+const fifthCard = "assets/images/fifthCard.jpg";
+
+// Icons with text logo
+const police = "assets/images/police.png";
+const hospital = "assets/images/hospital.jpg";
+const pharma = "assets/images/pharma.png";

@@ -83,3 +83,24 @@ Widget myCustomTextfield({controllerName, hint}) {
     ),
   );
 }
+
+Widget iconWithText(image, text) => Container(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Container(
+            padding: const EdgeInsets.all(15.0),
+            height: 70,
+            width: 70,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10.0), color: white),
+            child: Image(
+              height: 100,
+              width: 100,
+              image: AssetImage(image),
+            ),
+          ),
+          customTextWidget(text, 12.0, FontWeight.bold, black)
+        ],
+      ),
+    );

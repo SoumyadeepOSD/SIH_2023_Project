@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:sih_2023/Frontend/constant/colors.dart';
 import 'package:sih_2023/Frontend/constant/widgets.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:sih_2023/Frontend/pages/appSettings.dart';
+import 'package:sih_2023/Frontend/pages/assistant.dart';
 import 'package:sih_2023/Frontend/pages/firstTab.dart';
 import 'package:sih_2023/Frontend/pages/fourthTab.dart';
 import 'package:sih_2023/Frontend/pages/providerRegister.dart';
 import 'package:sih_2023/Frontend/pages/secondTab.dart';
 import 'package:sih_2023/Frontend/pages/thirdTab.dart';
-import 'assistant.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({super.key});
@@ -50,7 +51,14 @@ class _HomePageState extends State<HomePage> {
                 Icons.settings,
                 color: white,
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => AppSettings(),
+                  ),
+                );
+              },
             )
           ],
         ),
@@ -89,7 +97,7 @@ class _HomePageState extends State<HomePage> {
         floatingActionButton: FloatingActionButton(
           onPressed: () => Navigator.of(context).push(
             MaterialPageRoute(
-              builder: (context) => const RegisterProvider(),
+              builder: (context) => const PersonalAssistant(),
             ),
           ),
           backgroundColor: black,
