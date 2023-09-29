@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sih_2023/Frontend/pages/Providers/selectCategories.dart';
+import 'package:sih_2023/Frontend/pages/Users/homepage.dart';
 import 'package:sih_2023/Frontend/pages/Users/testingImage.dart';
 import '../../constant/colors.dart';
 import '../../constant/widgets.dart';
@@ -83,7 +84,7 @@ class SelectTypes extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const TestingImage(),
+                    builder: (context) =>  HomePage(),
                   ),
                 );
               },

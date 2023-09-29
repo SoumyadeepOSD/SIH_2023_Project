@@ -58,6 +58,29 @@ dependencies:
   http: ^1.1.0
   url_launcher: ^6.1.14
 
+  #lib1
+  flutter_lints: ^2.0.3
+
+  contacts_service: ^0.6.3
+  lottie: ^2.6.0
+  fluttertoast: ^8.2.2
+
+
+  location: ^5.0.3
+
+
+
+
+  flutter_spinkit: ^5.2.0
+  flutter_neumorphic: ^3.2.0
+  flutter_neumorphic_plus: ^3.3.0
+  animated_text_kit: ^4.2.2
+  velocity_x: ^4.1.1
+  chat_gpt_sdk:
+    git:
+      url: https://github.com/iampawan/Flutter-ChatGPT.git
+
+
 
   
 
@@ -92,6 +115,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
      - assets/images/
+     - assets/empty_favorite.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

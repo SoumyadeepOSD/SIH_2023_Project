@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 
-import '../../../Setting Page/languages_screen.dart';
-import '../../../flutter_settings_ui.dart';
 
+import '../flutter_settings_ui.dart';
+import 'languages_screen.dart';
 
-class FourthTab extends StatefulWidget {
+class SettingsScreen extends StatefulWidget {
   static const String id = 'settings-screen';
-  const FourthTab({Key? key}) : super(key: key);
+  const SettingsScreen({Key? key}) : super(key: key);
   @override
   _SettingsScreenState createState() => _SettingsScreenState();
 }
 
-class _SettingsScreenState extends State<FourthTab> {
+class _SettingsScreenState extends State<SettingsScreen> {
   bool lockInBackground = true;
   bool notificationsEnabled = true;
 
