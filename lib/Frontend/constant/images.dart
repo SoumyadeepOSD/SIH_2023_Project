@@ -11,6 +11,11 @@ const notaries = "assets/images/Notaries.png";
 const writers = "assets/images/Writers.png";
 const avtar = "assets/images/avtar.png";
 const avtar2 = "assets/images/avtar2.png";
+const femaleAvtar = "assets/images/femaleAvtar.jpg";
+const maleface1 = "assets/images/humanface1.jpg";
+const maleface2 = "assets/images/humanface2.jpg";
+const femaleface = "assets/images/femaleface1.jpg";
+const lawyerface = "assets/images/lawyerface.jpeg";
 const addImage = "assets/images/addImage.png";
 const imageUpload = "assets/images/imageUpload.png";
 const payment = "assets/images/payment.png";
@@ -26,3 +31,8 @@ const fifthCard = "assets/images/fifthCard.jpg";
 const police = "assets/images/police.png";
 const hospital = "assets/images/hospital.jpg";
 const pharma = "assets/images/pharma.png";
+
+// Providerside images
+const community = "assets/images/community.jpg";
+const leaderboard = "assets/images/ranking.jpg";
+const caseStatus = "assets/images/status.jpg";

@@ -4,8 +4,8 @@ import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:sih_2023/Frontend/constant/colors.dart';
 import 'package:sih_2023/Frontend/constant/images.dart';
-import 'package:sih_2023/Frontend/pages/usermodel.dart';
-import '../constant/widgets.dart';
+import 'package:sih_2023/Frontend/pages/Models/usermodel.dart';
+import '../../constant/widgets.dart';
 import 'package:file_picker/file_picker.dart';
 
 TextEditingController _firstNameController = TextEditingController();
@@ -99,12 +99,12 @@ class _RegisterProviderState extends State<RegisterProvider> {
                     children: [
                       ElevatedButton(
                           onPressed: () {
-                            selectFile();
+                            // selectFile();
                           },
                           child: const Text("Choose File")),
                       ElevatedButton(
                           onPressed: () {
-                            uploadFile();
+                            // uploadFile();
                           },
                           child: const Text("Upload File")),
                       if (pickedFile != null)
@@ -134,16 +134,16 @@ class _RegisterProviderState extends State<RegisterProvider> {
                           registerId: registerId,
                           phoneNumber: phoneNumber,
                           type: type);
-                      createUser(user);
-                      const CircularProgressIndicator();
-                      if (firstName != null &&
-                          lastName != null &&
-                          location != null &&
-                          registerId != null &&
-                          phoneNumber != null &&
-                          type != null) {
-                        Navigator.of(context).pop();
-                      }
+                      // createUser(user);
+                      // const CircularProgressIndicator();
+                      // if (firstName != null &&
+                      //     lastName != null &&
+                      //     location != null &&
+                      //     registerId != null &&
+                      //     phoneNumber != null &&
+                      //     type != null) {
+                      Navigator.of(context).pop();
+                      // }
                     },
                     child: const Text("Register"),
                   ),

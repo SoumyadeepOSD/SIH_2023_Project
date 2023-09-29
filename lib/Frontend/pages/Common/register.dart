@@ -2,9 +2,9 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:sih_2023/Frontend/constant/colors.dart';
-import '../constant/widgets.dart';
-import 'firstTab.dart';
-import 'usermodel.dart';
+import '../../constant/widgets.dart';
+import '../Users/firstTab.dart';
+import '../Models/usermodel.dart';
 
 TextEditingController _firstNameController = TextEditingController();
 TextEditingController _lastNameController = TextEditingController();

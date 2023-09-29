@@ -2,8 +2,8 @@
 import 'package:banner_carousel/banner_carousel.dart';
 import 'package:flutter/material.dart';
 import 'package:sih_2023/Frontend/pages/sliders/sliderPage.dart';
-import '../constant/colors.dart';
-import '../constant/widgets.dart';
+import '../../constant/colors.dart';
+import '../../constant/widgets.dart';
 
 class DetailsList extends StatelessWidget {
   String? firstName;
@@ -247,6 +247,10 @@ class DetailsList extends StatelessWidget {
                     child: ListView(
                       scrollDirection: Axis.horizontal,
                       children: [
+                        BuildCard(
+                            name: "Subhashree",
+                            review: "Fantastic Service Provider💗"),
+                        const SizedBox(width: 10),
                         BuildCard(name: "Ayush", review: "Nice work"),
                         const SizedBox(width: 10),
                         BuildCard(name: "Priya", review: "Super!"),

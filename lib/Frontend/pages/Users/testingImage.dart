@@ -1,12 +1,12 @@
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:sih_2023/Frontend/pages/detailsList.dart';
-import 'Frontend/constant/colors.dart';
-import 'Frontend/constant/widgets.dart';
-import 'Frontend/pages/register.dart';
-import 'Frontend/pages/usermodel.dart';
-import 'Frontend/states/categoryState.dart';
+import 'package:sih_2023/Frontend/pages/Users/detailsList.dart';
+import '../../constant/colors.dart';
+import '../../constant/widgets.dart';
+import '../Common/register.dart';
+import '../Models/usermodel.dart';
+import '../../states/categoryState.dart';
 
 TextEditingController _controller = TextEditingController();
 

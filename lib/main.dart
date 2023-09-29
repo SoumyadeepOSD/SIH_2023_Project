@@ -5,7 +5,7 @@ import 'package:provider/provider.dart';
 import 'package:sih_2023/Frontend/constant/utils.dart';
 import 'package:sih_2023/Frontend/states/generalState.dart';
 import 'package:sih_2023/firebase_options.dart';
-import 'package:sih_2023/splash_screen.dart';
+import 'package:sih_2023/Frontend/pages/Common/splash_screen.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           colorScheme: const ColorScheme.light(),
-          useMaterial3: true,
+          // useMaterial3: true,
         ),
         home: const SplashScreen(),
       ),

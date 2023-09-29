@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:sih_2023/Frontend/pages/firstTab.dart';
+import 'package:sih_2023/Frontend/pages/Users/firstTab.dart';
 import 'package:sih_2023/Frontend/states/generalState.dart';
-import '../constant/colors.dart';
-import '../constant/widgets.dart';
+import '../../constant/colors.dart';
+import '../../constant/widgets.dart';
 
 List<DropdownMenuItem<String>> get dropdownItems {
   List<DropdownMenuItem<String>> menuItems = [

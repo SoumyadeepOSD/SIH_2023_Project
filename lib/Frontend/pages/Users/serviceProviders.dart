@@ -3,8 +3,8 @@ import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:sih_2023/Frontend/constant/colors.dart';
 import 'package:sih_2023/Frontend/constant/widgets.dart';
-import 'package:sih_2023/Frontend/pages/register.dart';
-import 'package:sih_2023/Frontend/pages/usermodel.dart';
+import 'package:sih_2023/Frontend/pages/Common/register.dart';
+import 'package:sih_2023/Frontend/pages/Models/usermodel.dart';
 
 class ServiceProviders extends StatelessWidget {
   const ServiceProviders({super.key});

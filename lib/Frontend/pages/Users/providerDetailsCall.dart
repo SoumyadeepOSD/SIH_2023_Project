@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:sih_2023/Frontend/pages/scheduleMeeting.dart';
-import 'package:sih_2023/Frontend/pages/subcategories.dart';
-import '../constant/colors.dart';
-import '../constant/images.dart';
-import '../constant/widgets.dart';
+import 'package:sih_2023/Frontend/pages/Users/scheduleMeeting.dart';
+import 'package:sih_2023/Frontend/pages/Providers/subcategories.dart';
+import '../../constant/colors.dart';
+import '../../constant/images.dart';
+import '../../constant/widgets.dart';
 
 class ProviderDetailsCall extends StatelessWidget {
   const ProviderDetailsCall({super.key});

@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:sih_2023/Frontend/constant/colors.dart';
 import 'package:sih_2023/Frontend/constant/widgets.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
-import 'package:sih_2023/Frontend/pages/appSettings.dart';
-import 'package:sih_2023/Frontend/pages/assistant.dart';
-import 'package:sih_2023/Frontend/pages/firstTab.dart';
-import 'package:sih_2023/Frontend/pages/fourthTab.dart';
-import 'package:sih_2023/Frontend/pages/providerRegister.dart';
-import 'package:sih_2023/Frontend/pages/secondTab.dart';
-import 'package:sih_2023/Frontend/pages/thirdTab.dart';
+import 'package:sih_2023/Frontend/pages/Common/appSettings.dart';
+import 'package:sih_2023/Frontend/pages/Common/assistant.dart';
+import 'package:sih_2023/Frontend/pages/Users/firstTab.dart';
+import 'package:sih_2023/Frontend/pages/Users/fourthTab.dart';
+import 'package:sih_2023/Frontend/pages/Providers/providerRegister.dart';
+import 'package:sih_2023/Frontend/pages/Users/secondTab.dart';
+import 'package:sih_2023/Frontend/pages/Users/thirdTab.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({super.key});

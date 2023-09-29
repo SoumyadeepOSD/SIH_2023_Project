@@ -8,9 +8,11 @@ import 'package:sih_2023/Frontend/constant/colors.dart';
 import 'package:sih_2023/Frontend/constant/images.dart';
 import 'package:sih_2023/Frontend/constant/widgets.dart';
 import 'package:sih_2023/Frontend/pages/auth/login.dart';
-import 'package:sih_2023/Frontend/pages/register.dart';
-import 'package:sih_2023/Frontend/pages/usermodel.dart';
+import 'package:sih_2023/Frontend/pages/Common/register.dart';
+import 'package:sih_2023/Frontend/pages/Models/usermodel.dart';
 import 'package:sih_2023/Frontend/states/generalState.dart';
+
+import '../Common/selectType.dart';
 
 class FirstTab extends StatelessWidget {
   const FirstTab({super.key});
@@ -188,7 +190,17 @@ class FirstTab extends StatelessWidget {
                             shrinkWrap: true,
                             children: [
                               const SizedBox(width: 10.0),
-                              iconWithText(advocate, "Advocates"),
+                              InkWell(
+                                child: iconWithText(advocate, "Advocates"),
+                                onTap: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => const SelectTypes(),
+                                    ),
+                                  );
+                                },
+                              ),
                               const SizedBox(width: 10.0),
                               iconWithText(police, "Police Station"),
                               const SizedBox(width: 10.0),
@@ -197,7 +209,7 @@ class FirstTab extends StatelessWidget {
                               iconWithText(pharma, "Pharmacies"),
                             ],
                           ),
-                        )
+                        ),
                       ],
                     ),
                   ],

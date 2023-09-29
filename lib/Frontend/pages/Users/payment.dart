@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:sih_2023/Frontend/pages/providerDetailsCall.dart';
-import '../constant/colors.dart';
-import '../constant/images.dart';
-import '../constant/widgets.dart';
+import 'package:sih_2023/Frontend/pages/Users/providerDetailsCall.dart';
+import '../../constant/colors.dart';
+import '../../constant/images.dart';
+import '../../constant/widgets.dart';
 
 class Payment extends StatelessWidget {
   const Payment({super.key});

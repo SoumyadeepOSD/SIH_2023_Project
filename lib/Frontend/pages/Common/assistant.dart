@@ -3,8 +3,8 @@ import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:sih_2023/Frontend/states/generalState.dart';
-import '../constant/colors.dart';
-import '../constant/widgets.dart';
+import '../../constant/colors.dart';
+import '../../constant/widgets.dart';
 
 TextEditingController userInputController = TextEditingController();
 List<ChatMessage> chatMessages = [];

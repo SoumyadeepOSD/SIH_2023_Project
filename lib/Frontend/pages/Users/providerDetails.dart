@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:sih_2023/Frontend/pages/payment.dart';
-import 'package:sih_2023/Frontend/pages/subcategories.dart';
-import '../constant/colors.dart';
-import '../constant/images.dart';
-import '../constant/widgets.dart';
+import 'package:sih_2023/Frontend/pages/Users/payment.dart';
+import 'package:sih_2023/Frontend/pages/Providers/subcategories.dart';
+import '../../constant/colors.dart';
+import '../../constant/images.dart';
+import '../../constant/widgets.dart';
 
 class ProviderDetails extends StatelessWidget {
   const ProviderDetails({super.key});
