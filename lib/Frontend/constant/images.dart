@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
 const googleLogo = 'assets/images/GoogleLogo.png';
+const facebookLogo = "assets/images/facebooklogo.png";
+const customcommunityLogo = "assets/images/customcommunity.png";
+const twitterLogo = "assets/images/twitterLogo.jpg";
 const libra = "assets/images/image1.jpg";
 const hammer = "assets/images/image2.jpg";
 const casefile = "assets/images/image3.jpg";
@@ -33,6 +36,18 @@ const hospital = "assets/images/hospital.jpg";
 const pharma = "assets/images/pharma.png";
 
 // Providerside images
-const community = "assets/images/community.jpg";
+const communityLogo = "assets/images/community.jpg";
 const leaderboard = "assets/images/ranking.jpg";
 const caseStatus = "assets/images/status.jpg";
+const whatsppLogo = "assets/images/whatsapplogo.jpg";
+
+const lawyer1 = "assets/images/lawyer1.jpg";
+const lawyer2 = "assets/images/lawyer2.jpg";
+const lawyer3 = "assets/images/femalelawyer.jpg";
+const lawyer4 = "assets/images/lawyer3.jpg";
+const lawyer5 = "assets/images/lawyer4.jpg";
+const lawyer6 = "assets/images/lawyer5.jpg";
+const lawyer7 = "assets/images/lawyer6.jpg";
+const lawyer8 = "assets/images/lawyer7.jpg";
+const lawyer9 = "assets/images/lawyer8.jpg";
+const lawyer10 = "assets/images/lawyer9.jpg";

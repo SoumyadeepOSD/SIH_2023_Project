@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:sih_2023/Frontend/pages/Providers/community.dart';
+import 'package:sih_2023/Frontend/pages/Providers/leaderboard.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:sih_2023/Frontend/pages/Providers/providersProfile.dart';
 import '../../constant/colors.dart';
@@ -222,8 +224,12 @@ class _ProvidersHomeState extends State<ProvidersHome> {
             color: white,
             margin: EdgeInsets.symmetric(horizontal: 20.0),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 // Top section of home
+                const SizedBox(height: 20),
+                customTextWidget(
+                    "Welcome back Amrit", 24.0, FontWeight.bold, black),
                 const SizedBox(height: 20),
                 Container(
                   height: 100,
@@ -237,9 +243,38 @@ class _ProvidersHomeState extends State<ProvidersHome> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        iconWithText(community, "Community"),
-                        iconWithText(leaderboard, "Leaderboard"),
-                        iconWithText(caseStatus, "Case Status"),
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => Community(),
+                              ),
+                            );
+                          },
+                          child: iconWithText(communityLogo, "Community"),
+                        ),
+                        InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => LeaderBoard(),
+                                ),
+                              );
+                            },
+                            child: iconWithText(leaderboard, "Leaderboard")),
+                        InkWell(
+                          onTap: () {
+                            // Navigator.push(
+                            //   context,
+                            //   MaterialPageRoute(
+                            //     builder: (context) =>(),
+                            //   ),
+                            // );
+                          },
+                          child: iconWithText(caseStatus, "Case Status"),
+                        ),
                       ],
                     ),
                   ),
