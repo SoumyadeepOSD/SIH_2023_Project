@@ -1,11 +1,22 @@
+import 'dart:io';
+
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import '../../constant/colors.dart';
 import '../../constant/images.dart';
 import '../../constant/widgets.dart';
+import 'package:file_picker/file_picker.dart';
 
-class PrivateFilesUpload extends StatelessWidget {
+PlatformFile? pickedFile;
+
+class PrivateFilesUpload extends StatefulWidget {
   const PrivateFilesUpload({super.key});
 
+  @override
+  State<PrivateFilesUpload> createState() => _PrivateFilesUploadState();
+}
+
+class _PrivateFilesUploadState extends State<PrivateFilesUpload> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,14 +44,28 @@ class PrivateFilesUpload extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const SizedBox(height: 30.0),
-            SizedBox(
-              width: MediaQuery.of(context).size.width - 10,
-              child: const Image(
-                image: AssetImage(
-                  imageUpload,
-                ),
-              ),
-            ),
+            pickedFile == null
+                ? SizedBox(
+                    width: MediaQuery.of(context).size.width - 10,
+                    child: InkWell(
+                      onTap: () {
+                        selectFile(setState);
+                      },
+                      child: const Image(
+                        image: AssetImage(
+                          imageUpload,
+                        ),
+                      ),
+                    ),
+                  )
+                : Expanded(
+                    child: Container(
+                      color: Colors.blue.shade200,
+                      child: Center(
+                        child: Text(pickedFile!.name),
+                      ),
+                    ),
+                  ),
             customTextWidget(
               "Select Your Preferences",
               20.0,
@@ -52,7 +77,12 @@ class PrivateFilesUpload extends StatelessWidget {
               width: MediaQuery.of(context).size.width - 30,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(backgroundColor: green),
-                onPressed: () {},
+                onPressed: () {
+                  setState(() {
+                    pickedFile = null;
+                    Navigator.of(context).pop();
+                  });
+                },
                 child: customTextWidget(
                   "Submit",
                   16.0,
@@ -66,4 +96,12 @@ class PrivateFilesUpload extends StatelessWidget {
       ),
     );
   }
+}
+
+Future selectFile(setState) async {
+  final result = await FilePicker.platform.pickFiles();
+  if (result == null) return;
+  setState(() {
+    pickedFile = result.files.first;
+  });
 }

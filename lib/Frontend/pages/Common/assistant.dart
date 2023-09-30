@@ -22,7 +22,7 @@ class _PersonalAssistantState extends State<PersonalAssistant> {
   Widget build(BuildContext context) {
     Future<void> fetchAIResponse() async {
       try {
-        final apiKey =
+        const apiKey =
             '6JogrtXhrnnv6eGl6WVEsNYY5Hkx97Gu'; // Replace with your API key
         final userInput = userInputController.text;
 
@@ -90,21 +90,21 @@ class _PersonalAssistantState extends State<PersonalAssistant> {
     }
 
     return Scaffold(
-      appBar: AppBar(
-        leading: InkWell(
-          child: Icon(
-            Icons.arrow_back_ios,
-            color: white,
-          ),
-        ),
-        backgroundColor: black,
-        title: customTextWidget(
-          "Chat Support",
-          16.0,
-          FontWeight.bold,
-          white,
-        ),
-      ),
+      // appBar: AppBar(
+      //   leading: InkWell(
+      //     child: Icon(
+      //       Icons.arrow_back_ios,
+      //       color: white,
+      //     ),
+      //   ),
+      //   backgroundColor: black,
+      //   title: customTextWidget(
+      //     "Chat Support",
+      //     16.0,
+      //     FontWeight.bold,
+      //     white,
+      //   ),
+      // ),
       body: Consumer<GeneralStateProvider>(
         builder: (context, providervalue, child) => Column(
           children: [
@@ -115,8 +115,8 @@ class _PersonalAssistantState extends State<PersonalAssistant> {
                   final message = chatMessages[index];
                   return ListTile(
                     tileColor: message.isSender
-                        ? Colors.orange.shade300
-                        : Colors.green.shade500,
+                        ? Colors.blue.shade50
+                        : Colors.green.shade50,
                     title: customTextWidget(
                         message.isSender
                             ? providervalue.userFName.toString()
@@ -124,8 +124,8 @@ class _PersonalAssistantState extends State<PersonalAssistant> {
                         16.0,
                         FontWeight.bold,
                         black),
-                    subtitle: customTextWidget(
-                        message.text, 14.0, FontWeight.bold, white),
+                    subtitle: customTextWidget(message.text, 14.0,
+                        FontWeight.bold, message.isSender ? blue : green),
                   );
                 },
               ),
@@ -136,7 +136,7 @@ class _PersonalAssistantState extends State<PersonalAssistant> {
                 controller: userInputController,
                 decoration: InputDecoration(
                   filled: true,
-                  fillColor: Colors.yellowAccent,
+                  fillColor: lightGrey,
                   hintText: "Type your queries...",
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(
@@ -151,7 +151,7 @@ class _PersonalAssistantState extends State<PersonalAssistant> {
                 fetchAIResponse();
                 userInputController.clear();
               },
-              child: Text('Generate Response'),
+              child: const Text('Send'),
             ),
           ],
         ),

@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 const googleLogo = 'assets/images/GoogleLogo.png';
 const facebookLogo = "assets/images/facebooklogo.png";
 const customcommunityLogo = "assets/images/customcommunity.png";
@@ -40,6 +38,7 @@ const communityLogo = "assets/images/community.jpg";
 const leaderboard = "assets/images/ranking.jpg";
 const caseStatus = "assets/images/status.jpg";
 const whatsppLogo = "assets/images/whatsapplogo.jpg";
+const legalaid = "assets/images/legalaid.png";
 
 const lawyer1 = "assets/images/lawyer1.jpg";
 const lawyer2 = "assets/images/lawyer2.jpg";

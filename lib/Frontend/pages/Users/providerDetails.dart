@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:sih_2023/Frontend/pages/Users/payment.dart';
-import 'package:sih_2023/Frontend/pages/Providers/subcategories.dart';
 import '../../constant/colors.dart';
 import '../../constant/images.dart';
 import '../../constant/widgets.dart';
@@ -35,11 +34,14 @@ class ProviderDetails extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(height: 30.0),
-            const Center(
-              child: Image(
-                image: AssetImage(avtar),
-                height: 150,
-                width: 150,
+            Center(
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(10.0),
+                child: const Image(
+                  image: AssetImage(lawyer1),
+                  height: 150,
+                  width: 150,
+                ),
               ),
             ),
             const SizedBox(height: 20.0),
@@ -57,7 +59,7 @@ class ProviderDetails extends StatelessWidget {
                     children: [
                       WidgetSpan(
                         child: customTextWidget(
-                          'Rajesh Roy',
+                          'Ajay Nagar',
                           16.0,
                           FontWeight.w500,
                           black,

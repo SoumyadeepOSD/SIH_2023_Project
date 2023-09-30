@@ -4,11 +4,11 @@ import 'package:sih_2023/Frontend/constant/widgets.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:sih_2023/Frontend/pages/Common/appSettings.dart';
 import 'package:sih_2023/Frontend/pages/Common/assistant.dart';
+import 'package:sih_2023/Frontend/pages/Providers/caseStatus.dart';
 import 'package:sih_2023/Frontend/pages/Users/firstTab.dart';
 import 'package:sih_2023/Frontend/pages/Users/fourthTab.dart';
-import 'package:sih_2023/Frontend/pages/Providers/providerRegister.dart';
+import 'package:sih_2023/Frontend/pages/Users/privateFilesUpload.dart';
 import 'package:sih_2023/Frontend/pages/Users/secondTab.dart';
-import 'package:sih_2023/Frontend/pages/Users/thirdTab.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({super.key});
@@ -22,8 +22,8 @@ class _HomePageState extends State<HomePage> {
   final screens = [
     const FirstTab(),
     const SecondTab(),
-    const ThirdTab(),
-    const FourthTab()
+    const PersonalAssistant(),
+    const CaseStatus()
   ];
 
   @override
@@ -44,7 +44,14 @@ class _HomePageState extends State<HomePage> {
                 Icons.file_copy_outlined,
                 color: white,
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const PrivateFilesUpload(),
+                  ),
+                );
+              },
             ),
             IconButton(
               icon: Icon(
@@ -84,12 +91,12 @@ class _HomePageState extends State<HomePage> {
               text: "Search",
             ),
             GButton(
-              icon: Icons.favorite_outline_outlined,
-              text: "Favorites",
+              icon: Icons.question_answer,
+              text: "Ask",
             ),
             GButton(
               icon: Icons.info,
-              text: "Settings",
+              text: "Case\nStatus",
             )
           ],
         ),
@@ -102,7 +109,7 @@ class _HomePageState extends State<HomePage> {
           ),
           backgroundColor: black,
           child: Icon(
-            Icons.hail_outlined,
+            Icons.report,
             color: white,
           ),
         ),

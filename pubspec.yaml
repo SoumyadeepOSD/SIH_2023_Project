@@ -79,6 +79,7 @@ dependencies:
   chat_gpt_sdk:
     git:
       url: https://github.com/iampawan/Flutter-ChatGPT.git
+  timeline_tile: ^2.0.0
 
 
 
@@ -114,6 +115,7 @@ flutter:
   generate: true
   # To add assets to your application, add an assets section, like this:
   assets:
+     - assets/ 
      - assets/images/
      - assets/empty_favorite.png
   # An image asset can refer to one or more resolution-specific "variants", see

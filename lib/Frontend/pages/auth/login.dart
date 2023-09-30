@@ -81,7 +81,7 @@ class _LoginState extends State<Login> {
                                             backgroundColor: black,
                                           ),
                                           onPressed: () {
-                                            // signIn(context: context);
+                                            signIn(context: context);
                                             Navigator.push(
                                               context,
                                               MaterialPageRoute(
@@ -187,5 +187,4 @@ Future signIn({context}) async {
   } on FirebaseAuthException catch (e) {
     print(e);
   }
-  navigatorKey.currentState!.popUntil((route) => route.isFirst);
 }

@@ -37,7 +37,7 @@ class ProviderDetailsCall extends StatelessWidget {
             const SizedBox(height: 30.0),
             const Center(
               child: Image(
-                image: AssetImage(avtar),
+                image: AssetImage(lawyer1),
                 height: 150,
                 width: 150,
               ),
@@ -57,7 +57,7 @@ class ProviderDetailsCall extends StatelessWidget {
                     children: [
                       WidgetSpan(
                         child: customTextWidget(
-                          'Rajesh Roy',
+                          'Ajay Nagar',
                           16.0,
                           FontWeight.w500,
                           black,
@@ -171,31 +171,47 @@ class ProviderDetailsCall extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 ElevatedButton(
-                  style: ElevatedButton.styleFrom(backgroundColor: green),
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: white, elevation: 0.0),
                   onPressed: () {
                     Navigator.of(context).push(MaterialPageRoute(
                       builder: (context) => const Subcategories(),
                     ));
                   },
-                  child: customTextWidget(
-                    "Call",
-                    16.0,
-                    FontWeight.bold,
-                    white,
+                  child: Chip(
+                    backgroundColor: Colors.blue.shade50,
+                    label: customTextWidget(
+                      "Call",
+                      16.0,
+                      FontWeight.bold,
+                      black,
+                    ),
+                    avatar: Icon(
+                      Icons.call,
+                      color: blue,
+                    ),
                   ),
                 ),
                 ElevatedButton(
-                  style: ElevatedButton.styleFrom(backgroundColor: green),
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: white, elevation: 0.0),
                   onPressed: () {
                     Navigator.of(context).push(MaterialPageRoute(
                       builder: (context) => const ScheduleBooking(),
                     ));
                   },
-                  child: customTextWidget(
-                    "Schedule",
-                    16.0,
-                    FontWeight.bold,
-                    white,
+                  child: Chip(
+                    backgroundColor: Colors.green.shade50,
+                    avatar: Icon(
+                      Icons.video_call,
+                      color: green,
+                    ),
+                    label: customTextWidget(
+                      "Meeting",
+                      16.0,
+                      FontWeight.bold,
+                      black,
+                    ),
                   ),
                 ),
               ],

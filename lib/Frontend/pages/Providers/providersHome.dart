@@ -8,6 +8,7 @@ import '../../constant/colors.dart';
 import '../../constant/images.dart';
 import '../../constant/widgets.dart';
 import '../../states/generalState.dart';
+import 'caseStatus.dart';
 
 final URL = Uri.parse('https://meet.google.com/ekm-vmjr-uxy');
 
@@ -266,12 +267,12 @@ class _ProvidersHomeState extends State<ProvidersHome> {
                             child: iconWithText(leaderboard, "Leaderboard")),
                         InkWell(
                           onTap: () {
-                            // Navigator.push(
-                            //   context,
-                            //   MaterialPageRoute(
-                            //     builder: (context) =>(),
-                            //   ),
-                            // );
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => CaseStatus(),
+                              ),
+                            );
                           },
                           child: iconWithText(caseStatus, "Case Status"),
                         ),
